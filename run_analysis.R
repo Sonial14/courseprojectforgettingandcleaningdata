@@ -3,7 +3,7 @@
 ################################################
 
 ##testing group
-setwd("/Users/wanhaochi/Desktop/Coursera/gettingandcleaningdata/wk1/data2/UCI HAR Dataset")
+setwd("~/Desktop/Coursera/gettingandcleaningdata/wk1/data2/UCI HAR Dataset")
 
 testactlabel <- read.table("./test/y_test.txt",sep="\t")
 testactivitydata<- read.csv("./test/X_test.csv",head=F)
@@ -23,7 +23,7 @@ trainactivity <- cbind(subjecttrain,trainactlabel,trainactivitydata)
 activity <- rbind(testactivity,trainactivity)
 
 # step 4 : to get descriptive names for variables
-setwd("/Users/wanhaochi/Desktop/Coursera/gettingandcleaningdata/wk1/data2/UCI HAR Dataset")
+setwd("~/Desktop/Coursera/gettingandcleaningdata/wk1/data2/UCI HAR Dataset")
 features <- read.table("features.txt")
 feature4data<- as.vector(features[,2])
 colnames(activity) <- c("ID","activityClassification",feature4data)
